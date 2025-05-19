@@ -1,0 +1,89 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% call govukFieldset({
+  legend: {
+    text: "7. Your address",
+    classes: "govuk-fieldset__legend--l",
+    isPageHeading: true
+  }
+}) %}
+
+  {{ govukInput({
+    id: "address-line-1",
+    name: "addressLine1",
+    autocomplete: "address-line1",
+    label: {
+      text: "Building and street",
+      classes: "govuk-label--m"
+    },
+    classes: "govuk-!-margin-bottom-2"
+  }) }}
+
+  {{ govukInput({
+    id: "address-line-2",
+    name: "addressLine2",
+    autocomplete: "address-line2",
+    label: {
+      text: " ",
+      classes: "govuk-visually-hidden"
+    },
+    classes: "govuk-!-margin-bottom-2"
+  }) }}
+
+  {{ govukInput({
+    id: "address-line-3",
+    name: "addressLine3",
+    autocomplete: "address-line3",
+    label: {
+      text: " ",
+      classes: "govuk-visually-hidden"
+    }
+  }) }}
+
+  {{ govukInput({
+    id: "address-town",
+    name: "addressTown",
+    autocomplete: "address-level2",
+    classes: "govuk-!-width-two-thirds",
+    label: {
+      text: "Town or city",
+      classes: "govuk-label--m"
+    }
+  }) }}
+
+  {{ govukInput({
+    id: "address-county",
+    name: "addressCounty",
+    autocomplete: "address-level1",
+    classes: "govuk-!-width-two-thirds",
+    label: {
+      text: "County",
+      classes: "govuk-label--m"
+    }
+  }) }}
+
+  {{ govukInput({
+    id: "address-postcode",
+    name: "addressPostcode",
+    autocomplete: "postal-code",
+    classes: "govuk-input--width-10",
+    label: {
+      text: "Postcode",
+      classes: "govuk-label--m"
+    }
+  }) }}
+
+{% endcall %}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+{% endblock %}

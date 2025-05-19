@@ -1,0 +1,39 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{{ govukRadios({
+  idPrefix: "has-national-insurance-number",
+  name: "hasNationalInsuranceNumber",
+  fieldset: {
+    legend: {
+      text: "Do you have a National Insurance number?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    html: 'Read page 3 of the <a href="#" class="govuk-link">CH2 Notes</a>.'
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Continue",
+  href: "ni-number"
+}) }}
+
+{% endblock %}

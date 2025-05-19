@@ -1,0 +1,26 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+		<h1 class="govuk-heading-xl">Experiment no 1</h1>
+
+		<p class="govuk-body"><a href="https://www.timpaul.co.uk/posts/could-ai-convert-all-the-pdf-forms-on-gov-uk-into-web-forms/">Tims form-extractor-prototype</a>, <a href="https://github.com/LandRegistry/form-extractor-prototype">forked onto HMLR github</a>.  Plugged into Google Gemini (requires an API key to run - do this via a local .env file).  The output of that code - the JSON for the pages - we are seeing how we can use that to make prototype kit pages.  Currently copy and paste the JSON outputted into Claude.Ai and asking it to convert into gov design system nunjucks macro code - a page at a time.</p>
+		<p>Note: it's interesting that it (claude) adds extra information thats not in the prompt JSON, e.g.:
+		<ul class="govuk-list govuk-list--bullet">
+			<li>hyperlink to CH2 Notes</li>
+			<li>hint text and regex for NI Numbers</li>
+		</ul>
+		</p>
+
+		<p class="govuk-body">Ideally we'd like to go from: upload a pdf form to -> have the gov prototype pages created in the kit</p>
+
+		<p class="govuk-body">
+		<a class="govuk-link" href="ni-number-yes-no">See experiment no 1</a>
+		</p>
+
+{% endblock %}
