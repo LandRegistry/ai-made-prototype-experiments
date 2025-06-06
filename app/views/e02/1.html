@@ -1,0 +1,37 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{{ govukInput({
+  label: {
+    text: 'What is your name?' ,
+    classes: 'govuk-label--l',
+    isPageHeading: true
+  },
+  hint: {
+    text: undefined
+  },
+  id: 'full-name',
+  name: 'fullName',
+  autocomplete: 'name',
+  spellcheck: false
+}) }}
+
+
+						
+						
+
+
+
+
+
+{{ govukButton({
+  text: 'Continue',
+  href: '2'
+}) }}
+
+{% endblock %}

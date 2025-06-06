@@ -1,0 +1,54 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{{ govukDateInput({
+  id: 'dob',
+  namePrefix: 'dob',
+  fieldset: {
+    legend: {
+      text: 'What is your date of birth?',
+      isPageHeading: true,
+      classes: 'govuk-fieldset__legend--l'
+    }
+  },
+  hint: {
+    text: undefined
+  },
+  items: [
+    {
+      name: 'day',
+      classes: 'govuk-input--width-2',
+      autocomplete: 'bday-day'
+    },
+    {
+      name: 'month',
+      classes: 'govuk-input--width-2',
+      autocomplete: 'bday-month'
+    },
+    {
+      name: 'year',
+      classes: 'govuk-input--width-4',
+      autocomplete: 'bday-year'
+    }
+  ]
+}) }}
+
+
+						
+						
+
+
+
+
+
+{{ govukButton({
+  text: 'Continue',
+  href: '3'
+}) }}
+
+{% endblock %}
