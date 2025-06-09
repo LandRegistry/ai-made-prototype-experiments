@@ -13,6 +13,13 @@
 
 		<p class="govuk-body-l">Note: currently there are no API or other sensitive data items in this prototype; but some of the other tools used to create the work here do use APIs - i.e. have API keys.  Never put API keys in the code that will be uploaded to github - Ask Andy and Ro if you need to know how to keep your API key secure</p>
 
+		<h2 class="govuk-heading-l">Why experiment?</h2>
+		<p>AI doesnt look like it is going away, its here to stay, its a new paradigm in human computer interaction, what does it mean for public services?</p>
+		<p class="govuk-body">links:</p>
+		<ul class="govuk-list govuk-list--bullet">
+			<li><a href="https://substack.com/@richardjpope/note/c-70490223" class="govuk-link">When AI starts generating user interfaces for public services…</a></li>
+		</ul> 
+
 		<h2 class="govuk-heading-l">Experiment no 1</h2>
 		<p class="govuk-body"><a href="https://www.timpaul.co.uk/posts/could-ai-convert-all-the-pdf-forms-on-gov-uk-into-web-forms/">Tims form-extractor-prototype</a>, <a href="https://github.com/LandRegistry/form-extractor-prototype">forked onto HMLR github</a>.  Plugged into Google Gemini (requires an API key to run - do this via a local .env file).  The output of that code - the JSON for the pages - we are seeing how we can use that to make prototype kit pages.  Currently copy and paste the JSON outputted into Claude.Ai and asking it to convert into gov design system nunjucks macro code - a page at a time.  Note: it's interesting that it adds extra information thats not in the prompt JSON, e.g. hint text and regex for NI Numbers</p>
 
